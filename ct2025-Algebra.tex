@@ -299,7 +299,7 @@ citecolor=black
 	\section{Гомоморфизм колец. Проекция на фактор - гомоморфизм. Ядро
 		гомоморфизма - идеал. Образ гомоморфизма - подкольцо.}
 	\subsection{Гомоморфизм колец}
-	\textbf{Определение:} отображение $f: R \to S$ если:
+	\textbf{Определение:} отображение $f: R \to S$ - гомоморфизм если:
 	\begin{enumerate}
 		\item $f(r_1 + r_2) = f(r_1) + f(r_2)$
 		\item $f(r_1 \cdot r_2) = f(r_1) \cdot f(r_2)$
@@ -723,16 +723,16 @@ citecolor=black
 	$n = |S| = \sum\limits_{d | n, d \geq 1}|S_d| = \sum\limits_{d | n, d \geq 1}\varphi\left(\frac{n}{d}\right) = \sum\limits_{d | n, d \geq 1}\varphi\left(d\right)$
 	\subsection{Теорема о мультипликативной группе поля}
 	\textbf{Теорема:} пусть $F$ - конечное поле, тогда $F^\times = F \setminus \{0\}$ - циклическая группа, то есть $\exists a \in F^\times : \forall g \in F^\times \exists k \in \mathbb{N}: g = a^k$ \\
-	\textbf{Доказательство:} $G = F^\times, \psi\left(d\right) =$ количество элементов $G$ порядка $d$ $$g \in G \text{ имеет порядок } d, \text{ если } g^d = 1, \text{ но } g^k \neq 1 \forall k \in \left[1;d-1\right]$$ Пусть мы нашли $h \in G$ порядка $d$, рассмотрим $<h> = \{1, h, h^2, h^3, \dots, h^{d-1}\}$ - сколько тут элементов порядка $d$? $$h^k \in <h> \text{ имеет порядок } d \iff \left(h^k\right)^m \text{ закрасит всю группу}$$
-	Когда $\left(h^k\right)^m = h$? $h^{km}=h^1 \iff km = 1 \mod d \iff \gcd \left(k, d\right) = 1$ Получается в $<h>$ ровно $\varphi\left(d\right)$ элементов, которые имеют порядок $d$. Если мы находим хотя бы один элемент порядка $d$, то автоматически находим таких $\varphi\left(d\right)$ штук. \\
-	Любой элемент $<h>$ удовлетворяет уравнению $x^d=1$. Так как мы существуем в поле, у этого уравнения $\leq d$ различных решений, значит $<h>$ - все решения $x^d = 1$. \\
-	Пусть $t$ - элемент порядка $d$, тогда $t$ решает $x^d = 1 \implies t \in <h>$ $$\psi\left(d\right) = \left[\begin{array}{l}
+	\textbf{Доказательство:} $G = F^\times, \psi\left(d\right) =$ количество элементов $G$ порядка $d$ $$g \in G \text{ имеет порядок } d, \text{ если } g^d = 1, \text{ но } g^k \neq 1 \forall k \in \left[1;d-1\right]$$ Пусть мы нашли $h \in G$ порядка $d$, рассмотрим $\left\langle h\right\rangle = \{1, h, h^2, h^3, \dots, h^{d-1}\}$ - сколько тут элементов порядка $d$? $$h^k \in \left\langle h\right\rangle \text{ имеет порядок } d \iff \left(h^k\right)^m \text{ закрасит всю группу}$$
+	Когда $\left(h^k\right)^m = h$? $h^{km}=h^1 \iff km = 1 \mod d \iff \gcd \left(k, d\right) = 1$ Получается в $\left\langle h\right\rangle$ ровно $\varphi\left(d\right)$ элементов, которые имеют порядок $d$. Если мы находим хотя бы один элемент порядка $d$, то автоматически находим таких $\varphi\left(d\right)$ штук. \\
+	Любой элемент $\left\langle h\right\rangle$ удовлетворяет уравнению $x^d=1$. Так как мы существуем в поле, у этого уравнения $\leq d$ различных решений, значит $\left\langle h\right\rangle$ - все решения $x^d = 1$. \\
+	Пусть $t$ - элемент порядка $d$, тогда $t$ решает $x^d = 1 \implies t \in \left\langle h\right\rangle$ $$\psi\left(d\right) = \left[\begin{array}{l}
 		0, \text{ если не нашли} \\
 		\varphi\left(d\right), \text{ иначе}
 	\end{array}\right.\implies \psi\left(d\right) \leq \varphi\left(d\right)$$ $n = \sum\limits_{d | n} \psi\left(d\right) \leq \sum\limits_{d | n}\varphi\left(d\right) = n \implies \psi\left(d\right) = \varphi\left(d\right) \forall d | n$ \\
 	Для $d = n \psi\left(n\right) = \varphi(n) \geq 1 \implies$ нашли хотя бы 1 элемент порядка $n$ \\
 	\textbf{Лемма:} $G$ - конечная группа, $|G| = n$, $\alpha \in G$, тогда $ord \ \alpha | n$ \\
-	\textbf{Доказательство:} $C = <\alpha>$, $|C| = ord \ \alpha$, $G = \bigcup\limits_{g \in G} gC$, это действительно равенство, т.к $\forall g \in G g \in gC$. $$gC \cap g'C = \left[\begin{array}{l}
+	\textbf{Доказательство:} $C = \left\langle\alpha\right\rangle$, $|C| = ord \ \alpha$, $G = \bigcup\limits_{g \in G} gC$, это действительно равенство, т.к $\forall g \in G g \in gC$. $$gC \cap g'C = \left[\begin{array}{l}
 		\varnothing \\
 		gC = g'C
 	\end{array}\right.$$ Пусть $z \in gC \cap g'C$ \\ $z = gc_1 = g'c_2 \implies g = g'c_2c^{-1}_1$ \\
@@ -843,11 +843,11 @@ citecolor=black
 	\textbf{Определение:} пусть для векторного пространства $V$ существует конечный базис $B$, тогда назовем $\dim V  = |B|$ - размерность $V$ \\
 	\textbf{Утверждение:} Определение размерности корректно \\
 	\textbf{Доказательство:} $B, B'$ - базисы $V$ и $B$ - конечный \\
-	$B$ - порождающий и $B'$ линейно независимый $\implies \forall \text{ конечного подмножества} B'$ линейно независимо, пусть $S \subset B'$ - конечно подмножество, тогда $|S| \leq |B| \forall S \subset B'$ \\
+	$B$ - порождающий и $B'$ линейно независимый $\implies \forall \text{ конечного подмножества } B'$ линейно независимо, пусть $S \subset B'$ - конечноe подмножество, тогда $|S| \leq |B| \forall S \subset B'$ \\
 	Тогда $|B'| \leq |B|$, теперь скажем, что $B$ - линейно независимый и $B'$ - порождающий, тогда $|B| \leq |B'| \implies |B| = |B'|$
 	\section{Формула Грассмана. Антипример. Критерий прямой суммы.}
 	\subsection{Формула Грассмана}
-	\textbf{Теорема:} если $V = U + V$, где все конечномерны, то $$\dim \left(U + W\right) = \dim U + \dim W - \dim U \cap \dim W$$
+	\textbf{Теорема:} если $V = U + W$, где все конечномерны, то $$\dim \left(U + W\right) = \dim U + \dim W - \dim U \cap \dim W$$
 	\textbf{Доказательство:} пусть $\left\{e_1, \dots, e_k\right\}$ - базис $U \cap W$, т.к $U \cap W \subset U$, базис $U \cap W$ можно расширить до базиса $U$ - $\left\{e_1, \dots, e_k, u_1, \dots, u_m\right\}$. Аналогично для $W$ - $\left\{e_1, \dots, e_k, w_1, \dots, w_n\right\}$, тогда $\left\{e_1, \dots,e_k, u_1, \dots, u_m, w_1, \dots, w_n\right\}$ - базис $U + W$ 
 	\begin{itemize}
 		\item порождаемость: пусть $u + w \in U + W, u = \sum\alpha_ie_i + \sum \beta_iu_i, w = \sum \mu_ie_i + \sum \gamma_iw_i \implies u + w = \sum \left(\mu_i + \alpha_i\right)e_i + \sum \beta_iu_i + \sum\gamma_iw_i$
@@ -859,9 +859,9 @@ citecolor=black
 	$$\dim\left(U + W\right) = k + n + m = \left(k + n\right) + \left(k + m\right) - k = \dim W + \dim U - \dim U \cap W$$
 	\subsection{Антипример}
 	Допустим у нас есть пространства в $\mathbb{R}^3$: \\
-	$U_1 = <x, y>, U_2 = <x + z>, U_3 = <z>$, $$\dim\left(U_1 + U_2 + U3\right) = 3 \neq 2 + 1 + 1 - 0 - 0 - 0 + 0 = 4$$
+	$U_1 = \left\langle x, y\right\rangle, U_2 = \left\langle x + z\right\rangle, U_3 = \left\langle z\right\rangle$, $$\dim\left(U_1 + U_2 + U3\right) = 3 \neq 2 + 1 + 1 - 0 - 0 - 0 + 0 = 4$$
 	\subsection{Критерий прямой суммы}
-	\textbf{Определение:} сумма векторных подпространств называется прямой, если $U \cap W = 0$ $$U \bigoplus W$$ \\
+	\textbf{Определение:} сумма векторных подпространств называется прямой, если $U \cap W = 0$ $$U \oplus W$$ \\
 	\textbf{Утверждение:} сумма $V + W$ - прямая $ \iff \forall v \in U + W \exists!u \in U \exists! w \in W: v = u + w$ \\
 	\textbf{Доказательство:} \begin{itemize}
 		\item Достаточность: \\
@@ -870,9 +870,79 @@ citecolor=black
 		$v \in U \cap W, v = v + 0 = 0 + v$, где сначала $v \in U$, затем $v \in W$, тогда по единственности разложения $v = 0$
 	\end{itemize}
 	\section{Теорема о размернорсти ядра и образа.}
+	\textbf{Теорема:} $\mathcal{L}: V \to W$ - линейное отображение, тогда $\dim V = \dim \ker \mathcal{L} + \dim Im \ \mathcal{L}$ \\
+	\textbf{Доказательство:} пусть $e_1, \dots, e_k$ - базис $\ker \mathcal{L}$ - линейно независимое в $V \implies$ мы можем расширить до $e_1, \dots e_k, e_{k + 1}, \dots, e_n$ - базиса пространства $V$. \\ Покажем, что $\mathcal{L}\left(e_{k + 1}\right), \dots, \mathcal{L}\left(e_n\right)$ - базис $Im \ \mathcal{L}$ \begin{itemize}
+		\item Порождаемость: \\
+		пусть $w \in Im \ \mathcal{L} \implies \exists v \in V: w = \mathcal{L}\left(v\right)$, разложим $v$ по базису $V$: \\ $v = \sum\limits_{i = 1}^k\alpha_i e_i + \sum\limits_{i = k + 1}^n \alpha_ie_i$ \\
+		$w = \mathcal{L}\left(v\right) = \mathcal{L}\left(\sum\limits_{i = 1}^k\alpha_i e_i + \sum\limits_{i = k + 1}^n \alpha_ie_i\right) = \sum\limits_{i = 1}^k\alpha_i\mathcal{L}\left(e_i\right) + \sum\limits_{i = k + 1}^n\alpha_i\mathcal{L}\left(e_i\right) = \sum\limits_{i = k + 1}^n\alpha_i\mathcal{L}\left(e_i\right)$, так как $e_1, \dots, e_k \in \ker \mathcal{L} \implies \mathcal{L}\left(e_i\right) = 0 \ \forall i = 1,\dots,k$
+		\item Линейная независимость: \\
+		Пусть $\sum\limits_{i = k + 1}^n\beta_i\mathcal{L}\left(e_i\right) = 0 = \mathcal{L}\left(\sum\limits_{i = k + 1}^n\beta_ie_i\right)\implies \sum\limits_{i = k + 1}^n\beta_ie_i \in \ker \mathcal{L}$, тогда распишем эту сумму по базису ядра: $\sum\limits_{i = k + 1}^n\beta_ie_i  = \sum\limits_{i = 1}^k\gamma_ie_i \implies \sum\limits_{i = k + 1}^n\beta_ie_i - \sum\limits_{i = 1}^k\gamma_ie_i = 0 \implies \beta_i = 0 \ \forall i = k+1, \dots, n, \gamma_i = 0 \ \forall i = 1, \dots, k$, так как это базис $V$ 
+	\end{itemize}
+	$$ \dim V = n = k + \left(n - k\right) = \dim \ker \mathcal{L} + \dim Im \ \mathcal{L}$$
+	
 	\section{Матрица линейного отображения. Изоморфизм \texorpdfstring{$Hom\left(k^n,k^m\right)\overset{\sim}{=}M_{m\times n} \left(k\right)$}{HOM(k^n,k^m) = M_mxn(k)}. Матрица композиции операторов.}
+	\subsection{Матрица линейного отображения.}
+	\textbf{Определение:} $\mathcal{L}: V \to W$ - линейное отображение, $e = \left(e_1, \dots, e_n\right)$ - базис $V$, $f = \left(f_1, \dots, f_m\right)$ - базис $W$ $$ \left[\mathcal{L}\right]_{e,f} \text{ - матрица линейного отображения $\mathcal{L}$ в базисах $e$ и $f$}$$
+	Нам достаточно определить только как отображение действует на базисных векторах: $\mathcal{L}\left(e_i\right)$ - какой то вектор в $W$, значит мы можем выразить его в базисе $W$ \\
+	$\mathcal{L}e_1 = a_{11}f_1 + a_{21}f_2 + a_{31}f_3 + \dots + a_{m1}f_m$ \\
+	$\mathcal{L}e_2 = a_{12}f_1 + a_{22}f_2 + a_{32}f_3 + \dots + a_{m2}f_m$ \\
+	\vdots \\
+	$\mathcal{L}e_j = a_{1j}f_1 + a_{2j}f_2 + a_{3j}f_3 + \dots + a_{mj}f_m$ 
+	$$\left[\mathcal{L}\right]_{e,f} = \begin{pmatrix}
+		a_{11} & a_{12} & \cdots & a_{1n} \\
+		a_{21} & a_{22} & \cdots & a_{2n} \\
+		\vdots  & \vdots  & \ddots & \vdots  \\
+		a_{m1} & a_{m2} & \cdots & a_{mn}
+	\end{pmatrix}$$
+	\subsection{Изоморфизм \texorpdfstring{$Hom\left(k^n,k^m\right)\overset{\sim}{=}M_{m\times n} \left(k\right)$}{HOM(k^n,k^m) = M_mxn(k)}.} Введем такое отображение $\pi:Hom\left(k^n, k^m\right) \to M_{m \times n}\left(k\right)$. Так как $k^n \overset{\sim}{=} V, \dim V = n$ и $k^m \overset{\sim}{=} W, \dim W = m$, будем использовать векторные пространства $V$ и $W$. Нам нужно доказать, что $\pi$ - биекция и линейное отображение. Пусть $e_1, \dots, e_n$ - базис $V$, $f_1, \dots, f_m$ - базис $W$. Возьмем линейное отображение $\mathcal{L} \in Hom\left(V, W\right)$. Подействуем им на базис $V$ и выразим результат через базис $W$: $\mathcal{L}e_j = \sum\limits_{i = 1}^ma_{ij}f_i$. Наше отображение $\pi\left(\mathcal{L}\right) = \left(a_{ij}\right) \in M_{m \times n}$. Покажем, что $\pi$ - линейное отображение: \begin{enumerate}
+		\item $\mathcal{L} \in Hom\left(V, W\right), \mathcal{T} \in Hom\left(V, W\right)$ \\
+		Определим $\pi\left(\mathcal{L} + \mathcal{T}\right) = \pi\left(\mathcal{L}\right) + \pi\left(\mathcal{T}\right)$ как просто поэлементное суммирование элементов двух матриц.
+		\item $\mathcal{L} \in Hom\left(V, W\right), \gamma \in k$ \\
+		Определим $\pi\left(\gamma\mathcal{L}\right) = \gamma\pi\left(\mathcal{L}\right)$ как умножение каждого элемента матрицы на элемент из поля.
+	\end{enumerate}
+	Теперь нам надо доказать биекцию. \begin{itemize}
+		\item Инъекция \\
+		пусть $\mathcal{L} \in \ker \pi$, тогда $\pi\left(\mathcal{L}\right) = 0$, тогда $\mathcal{L}e_i = 0 \ \forall i = 1, \dots, n$, тогда $\mathcal{L}v = 0 \ \forall v \in V \implies \ker \pi = 0 \implies \pi$ - инъекция
+		\item Сюръекция \\
+		Возьмем любую матрицу $A$ из $M_{m\times n}$. Пусть у нас есть $\mathcal{L}\left(e_j\right) = \sum\limits_{i = 1}^ma_{ij}f_i$. По свойству базиса если мы можем отправить базис в область значений, то существует единственное такое линейное отображение. Тогда $\pi\left(\mathcal{L}\right) = A$
+	\end{itemize}
+	\subsection{Матрица композиции операторов.}
+	Мы можем определить эту операцию только когда $V = W$ в $Hom\left(V, W\right)$ Пусть у нас есть две матрицы: $$A_{m\times n} = \begin{pmatrix}
+		a_{11} & a_{12} & \cdots & a_{1n} \\
+		a_{21} & a_{22} & \cdots & a_{2n} \\
+		\vdots  & \vdots  & \ddots & \vdots  \\
+		a_{m1} & a_{m2} & \cdots & a_{mn}
+	\end{pmatrix}$$
+	$$B_{n\times k} = \begin{pmatrix}
+		b_{11} & b_{12} & \cdots & b_{1k} \\
+		b_{21} & b_{22} & \cdots & b_{2k} \\
+		\vdots  & \vdots  & \ddots & \vdots  \\
+		b_{n1} & b_{n2} & \cdots & b_{nk}
+	\end{pmatrix} $$
+	композиция в данном случае аналогична умножению матриц, когда мы берем строку из $A$ и поэлементно умножаем на столбец из $B$, то есть наш элемент в $AB$ задается следующим образом: $$ab_{ik} = \sum\limits_{j = 1}^n a_{ij}b_{jk}$$
+	Новая матрица имеет размер $m \times k$
 	\section{Замена базиса (в области определения и области значения). Канонический вид матрицы линейного отображения.}
+	\subsection{Канонический вид матрицы линейного отображения.}
+	\textbf{Теорема:} $\mathcal{L}: V \to W$ - линейное отображение, Тогда $\exists$ базис $e_1, \dots, e_n$ пространства $V$ и базис $f_1, \dots, f_m$ пространства $W$, такое что: $$\left[\mathcal{L}\right]_{e,f} = \begin{pmatrix}
+		1 & 0 & 0 & 0 & 0 &\cdots & 0 \\
+		0 & 1 & 0 & 0 & 0 &\cdots & 0 \\
+		0 & 0 & \ddots & 0 & 0 &\cdots & 0\\
+		0 & 0 & 0 & 1 & 0 &\cdots & 0 \\
+		0 & 0 & 0 & 0 & 0 & \cdots & 0 \\
+		\vdots & \vdots & \vdots & \vdots & \vdots & \ddots & \vdots \\
+		0 & 0 & 0 & 0 & 0 & \cdots & 0
+	\end{pmatrix}$$
+	\textbf{Доказательство:} пусть $e_{k + 1}, \dots, e_n$ - базис $\ker \mathcal{L}$ дополним этот базис до базиса $V$. $\mathcal{L}\left(e_1\right), \dots, \mathcal{L}\left(e_k\right)$ - базис $Im \ \mathcal{L} = f_1, \dots, f_k$, достроим до базиса $W$. \\ Теперь попытаемся построить матрицу: \\ $\mathcal{L}e_1 = 1f_1 + 0f_2 + \dots \\ \mathcal{L}e_2 = 0f_1 + 1f_2 + 0f_3 + \dots \\ \vdots \\ \mathcal{L}e_k = 0f_1 + 0f_2 + \dots + 1f_k$ \\
+	Дальше мы будем обращаться к базисным векторам из ядра, следовательно везде будут нули.
 	\section{Универсальное свойство базиса.}
+	$V$ - векторное пространство, $e_1, \dots, e_n$ - базис $V$, пусть $\mathcal{L} \in Hom\left(V, W\right)$. $$\mathcal{L}\left(v\right) = \mathcal{L}\left(\sum\limits_{i = 1}^n\alpha_ie_i\right) = \sum\limits_{i = 1}^n\alpha_iL\left(e_i\right)$$
+	\textbf{Утверждение:} $\forall f\left(e_1, \dots, e_n\right) \to W \ \exists! \text{ линейное отображение } \mathcal{L}:V\to W: \mathcal{L}\left(e_i\right) = f\left(e_i\right)$ \\
+	\textbf{Доказательство:} $\mathcal{L}\left(v\right) = \mathcal{L}\left(\sum\limits_{i = 1}^n\alpha_ie_i\right)$. Определим $\mathcal{L}\left(v\right)$ как $\sum\limits_{i = 1}^n\alpha_if\left(e_i\right)$, теперь покажем, что это линейное отображение. 
+	\begin{enumerate}
+		\item $\mathcal{L}\left(v + \widetilde{v}\right) = \mathcal{L}\left(\sum\limits_{i = 1}^n\alpha_ie_i + \sum\limits_{i = 1}^n\widetilde{\alpha}_ie_i\right) = \mathcal{L}\left(\sum\limits_{i = 1}^n\left(\alpha_i + \widetilde{\alpha}_i\right)e_i\right) = \sum\limits_{i = 1}^n\left(\alpha_i + \widetilde{\alpha}_i\right)f\left(e_i\right) = \sum\limits_{i = 1}^n \alpha_if\left(e_i\right) + \sum\limits_{i = 1}^n\widetilde{\alpha}_if\left(e_i\right) = \mathcal{L}\left(v\right) + \mathcal{L}\left(\widetilde{v}\right)$
+		\item $\mathcal{L}\left(\beta v\right) = \mathcal{L}\left(\beta\sum\limits_{i = 1}^n\alpha_ie_i\right) = \mathcal{L}\left(\sum\limits_{i = 1}^n\beta\alpha_ie_i\right) = \sum\limits_{i = 1}^n \beta\alpha_if\left(e_i\right) = \beta \sum\limits_{i = 1}^n \alpha_if\left(e_i\right) = \beta \mathcal{L}\left(v\right)$
+	\end{enumerate} 
+	Также покажем единственность такого отображения: пусть $\mathcal{L}$ и $\mathcal{T}$: \\ $\mathcal{L}\left(e_i\right) = f\left(i\right) \forall i = 1\dots n, \mathcal{T}\left(e_i\right) = f\left(i\right) \forall i = 1\dots n $ $$\left(\mathcal{L} - \mathcal{T}\right)\left(v\right) = \left(\mathcal{L} - \mathcal{T}\right)\left(\sum\limits_{i = 1}^n \alpha_ie_i\right) = \sum\limits_{i = 1}^n \alpha_if\left(e_i\right) - \sum\limits_{i = 1}^n \alpha_if\left(e_i\right) = 0 \ \forall v \in V$$
 	\section{Двойственный базис. Изоморфизм \texorpdfstring{$V \text{ и } V^*$}{V и V^*} для конечномерного $V$. Канонический изоморфизм $V$ и $V^{**}$ для конечномерного $V$.}
 	\section{Лемма о размерности аннулятора.}
 	\section{Сопряженный оператор. Матрица сопряженного оператора.}
@@ -882,8 +952,8 @@ citecolor=black
 	\section{Внешняя степень, построение. Внешняя алгебра.}
 	\section{Базис внешней степени. Подсчет размерности внешней степени.}
 	\section{ Индуцированные гомоморфизмы на тензорной и внешней алгебрах. Определитель. Мультипликативность определителя.}
-	\section{Изоморфизм \texorpdfstring{$V \overset{\sim}{=}\left(\lambda^{n-1}V\right)^*$}{V = (Lambda^n-1V)}}
-	\section{ Критерий обратимости оператора в терминах определителя. Построение обратного оператора с помощью изоморфизма \texorpdfstring{$V \overset{\sim}{=}\left(\lambda^{n-1}V\right)^*$}{V = (Lambda^n-1V)}.}
+	\section{Изоморфизм \texorpdfstring{$V \overset{\sim}{=}\left(\wedge^{n-1}V\right)^*$}{V = (wedge^n-1V)}}
+	\section{ Критерий обратимости оператора в терминах определителя. Построение обратного оператора с помощью изоморфизма \texorpdfstring{$V \overset{\sim}{=}\left(\wedge^{n-1}V\right)^*$}{V = (wedge^n-1V)}.}
 	\section{ Модуль над кольцом; определение конечнопорожденного и свободного модуля. Построение копредставления для конечно-порожденного модуля.}
 	\section{Нормальная форма Смита для матриц над областью главных идеалов.}
 	\section{Теорема о структуре конечно-порожденного модуля над ОГИ.}

@@ -847,7 +847,7 @@ citecolor=black
 	Тогда $|B'| \leq |B|$, теперь скажем, что $B$ - линейно независимый и $B'$ - порождающий, тогда $|B| \leq |B'| \implies |B| = |B'|$
 	\section{Формула Грассмана. Антипример. Критерий прямой суммы.}
 	\subsection{Формула Грассмана}
-	\textbf{Теорема:} если $V = U + W$, где все конечномерны, то $$\dim \left(U + W\right) = \dim U + \dim W - \dim U \cap \dim W$$
+	\textbf{Теорема:} если $V = U + W$, где все конечномерны, то $$\dim \left(U + W\right) = \dim U + \dim W - \dim (U \cap W)$$
 	\textbf{Доказательство:} пусть $\left\{e_1, \dots, e_k\right\}$ - базис $U \cap W$, т.к $U \cap W \subset U$, базис $U \cap W$ можно расширить до базиса $U$ - $\left\{e_1, \dots, e_k, u_1, \dots, u_m\right\}$. Аналогично для $W$ - $\left\{e_1, \dots, e_k, w_1, \dots, w_n\right\}$, тогда $\left\{e_1, \dots,e_k, u_1, \dots, u_m, w_1, \dots, w_n\right\}$ - базис $U + W$ 
 	\begin{itemize}
 		\item порождаемость: пусть $u + w \in U + W, u = \sum\alpha_ie_i + \sum \beta_iu_i, w = \sum \mu_ie_i + \sum \gamma_iw_i \implies u + w = \sum \left(\mu_i + \alpha_i\right)e_i + \sum \beta_iu_i + \sum\gamma_iw_i$
